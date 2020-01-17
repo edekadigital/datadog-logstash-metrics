@@ -67,3 +67,5 @@ RUN apt-get update && \
     rm -rf /var/cache/apt /root/.cache
 
 COPY create-logstash-plugin-conf.py /etc/cont-init.d/59-logstash.py
+COPY start.sh /usr/local/bin/start.sh
+ENTRYPOINT ["/usr/local/bin/start.sh"]
